@@ -11,7 +11,7 @@ void setup() {
   digitalWrite(A_1A,LOW); // pin 初始
   digitalWrite(A_1B,LOW); // pin 初始
     
-  pinMode(3,INPUT);
+  pinMode(3,INPUT); // 讀取微動開關狀態
   pinMode(6,OUTPUT); // pin 到達底部 : 紅燈
   pinMode(7,OUTPUT); // pin 可移動 : 綠燈
 
@@ -21,6 +21,10 @@ void setup() {
 
 void loop() {
   val = digitalRead(3); // 判定微動開關狀態
+  /*
+  val = 0 : pin 沒壓下微動
+  val = 1 : pin 壓下微動
+  */
   if(green_led) Serial.println("繼續");
   if(red_led) Serial.println("停止");
  
@@ -49,7 +53,7 @@ void loop() {
     // pin 往下
     digitalWrite(A_1A,LOW);
     analogWrite(A_1B,255);
-    delay(300);
+    delay(250);
     if(val == 1){
       // 觸發微動開關 : pin 到達底部
       Serial.println("停止觸發成功");
