@@ -25,10 +25,12 @@ void loop() {
   val = 0 : pin 沒壓下微動
   val = 1 : pin 壓下微動
   */
-  if(green_led) Serial.println("繼續");
-  if(red_led) Serial.println("停止");
- 
-  if(Serial.available()){   
+  
+  if(Serial.available()){
+  if(green_led) Serial.println("沒壓到微動");
+  if(red_led) Serial.println("壓到微動");
+  if(!green_led && !red_led ) Serial.println("停止");
+       
   char x = Serial.read();
   Serial.println(x);
   
@@ -65,6 +67,8 @@ void loop() {
     }else{
       digitalWrite(A_1A,LOW);
       digitalWrite(A_1B,LOW);
+      red_led = false;
+      green_led = false;
     }
   }
 }
