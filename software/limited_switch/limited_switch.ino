@@ -27,51 +27,51 @@ void loop() {
   */
   
   if(Serial.available()){
-  if(green_led) Serial.println("沒壓到微動");
-  if(red_led) Serial.println("壓到微動");
-  if(!green_led && !red_led ) Serial.println("停止");
-       
-  char x = Serial.read();
-  Serial.println(x);
-  
-  if(val == 0){
-    green_led = true;
-    red_led = false;
-    digitalWrite(6,LOW);
-    digitalWrite(7,HIGH);
-    }else{
-      green_led = false;
-      red_led = true;
-      digitalWrite(6,HIGH);
-      digitalWrite(7,LOW);
-      }
-  
-  if(x == 'f'){
-    // pin 往上
-    analogWrite(A_1A,255);
-    digitalWrite(A_1B,LOW);
-    delay(100);
-  }else if(x == 'r'){
-    // pin 往下
-    digitalWrite(A_1A,LOW);
-    analogWrite(A_1B,255);
-    delay(100);
-    if(val == 1){
-      // 觸發微動開關 : pin 到達底部
-      Serial.println("停止觸發成功");
-      digitalWrite(6,HIGH);
-      digitalWrite(7,LOW);
-      digitalWrite(A_1A,LOW);
-      digitalWrite(A_1B,LOW);
-      }
-    }else{
-      digitalWrite(A_1A,LOW);
-      digitalWrite(A_1B,LOW);
+    if(green_led) Serial.println("沒壓到微動");
+    if(red_led) Serial.println("壓到微動");
+    if(!green_led && !red_led ) Serial.println("停止");
+         
+    char x = Serial.read();
+    Serial.println(x);
+    
+    if(val == 0){
+      green_led = true;
       red_led = false;
-      green_led = false;
-    }
-  }
-}
+      digitalWrite(6,LOW);
+      digitalWrite(7,HIGH);
+      }else{
+        green_led = false;
+        red_led = true;
+        digitalWrite(6,HIGH);
+        digitalWrite(7,LOW);
+        }
+    
+    if(x == 'f'){
+      // pin 往上
+      analogWrite(A_1A,255);
+      digitalWrite(A_1B,LOW);
+      delay(100);
+    }else if(x == 'r'){
+      // pin 往下
+      digitalWrite(A_1A,LOW);
+      analogWrite(A_1B,255);
+      delay(100);
+      if(val == 1){
+        // 觸發微動開關 : pin 到達底部
+        Serial.println("停止觸發成功");
+        digitalWrite(6,HIGH);
+        digitalWrite(7,LOW);
+        digitalWrite(A_1A,LOW);
+        digitalWrite(A_1B,LOW);
+        }
+      }else{
+        digitalWrite(A_1A,LOW);
+        digitalWrite(A_1B,LOW);
+        red_led = false;
+        green_led = false;
+        }
+      }
+     }
 /*
 void test(){
 if(Serial.available()){
