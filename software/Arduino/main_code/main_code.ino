@@ -82,17 +82,17 @@ void motor_forward(int key1){
   int delay_time = 300;
   switch(key1){
     case 1 :
-      Serial.println("A1往前");
-      analogWrite(A1_A,255);
-      digitalWrite(A1_B,LOW);
-      delay(delay_time);
-      break;
+     Serial.println("A1往前");
+     analogWrite(A1_A,255);
+     digitalWrite(A1_B,LOW);
+     delay(delay_time);
+     break;
     case 2 :
-      Serial.println("A2往前");
-      analogWrite(A2_A,255);
-      digitalWrite(A2_B,LOW);
-      delay(delay_time);
-      break;
+     Serial.println("A2往前");
+     analogWrite(A2_A,255);
+     digitalWrite(A2_B,LOW);
+     delay(delay_time);
+     break;
     case 3 :
      Serial.println("A3往前");
      analogWrite(A3_A,255);
