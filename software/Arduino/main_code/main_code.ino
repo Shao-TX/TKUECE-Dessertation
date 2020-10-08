@@ -1,12 +1,12 @@
-#define MOTOR_NUM 6
+#define MOTOR_NUM 5
 
 struct Motor{
   byte A,B,LS;
 };
 
 Motor motor[MOTOR_NUM];
-byte motor_pins[MOTOR_NUM*2] = {13,11,12,10,8,9,7,6,4,5,2,3};
-byte motor_limitSwitch[MOTOR_NUM] = {A1,A0,A2,A3,A4,A5};
+byte motor_pins[MOTOR_NUM*2] = {13,12,11,10,9,8,7,6,3,2};
+byte motor_limitSwitch[MOTOR_NUM] = {A1,A0,A2,A3,A4};
 int control = 0;
 
 void setup() {
@@ -41,8 +41,19 @@ void loop() {
   stop_(control);
   delay(1000);
   */
-  reset(1);
-  delay(10000000);
+  Serial.println("connected!");
+  up(control);
+  delay(300);
+  stop_(control);
+  delay(300);
+  down(control);
+  delay(300);
+  stop_(control);
+  delay(300);
+  control++;
+  if(control==5){
+    control=0;
+  }
 }
 
 void up(byte index){
