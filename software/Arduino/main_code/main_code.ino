@@ -1,16 +1,15 @@
-#define MOTOR_NUM 5
+#define MOTOR_NUM 6
 
 struct Motor{
   byte A,B,LS;
 };
 
 Motor motor[MOTOR_NUM];
-byte motor_pins[MOTOR_NUM*2] = {13,12,11,10,9,8,7,6,3,2};
-byte motor_limitSwitch[MOTOR_NUM] = {A1,A0,A2,A3,A4};
+byte motor_pins[MOTOR_NUM*2] = {13,12,11,10,9,8,7,6,5,4,3,2};
+byte motor_limitSwitch[MOTOR_NUM] = {A0,A1,A2,A3,A6,A7};
 int control = 0;
 
-void setup() {
-
+void setup(){
   //pinMode(A0,INPUT_PULLUP); // limited switch
   // put your setup code here, to run once:
   for(int i=0;i<MOTOR_NUM;i++){
@@ -27,20 +26,6 @@ void setup() {
 }
 
 void loop() {
-  /*
-  delay(1000);
-  down(control);
-  delay(370);
-  stop_(control);
-  delay(1000);
-  
-  int start = millis();
-  
-  up(control);
-  delay(360);
-  stop_(control);
-  delay(1000);
-  */
   Serial.println("connected!");
   up(control);
   delay(300);
@@ -51,7 +36,7 @@ void loop() {
   stop_(control);
   delay(300);
   control++;
-  if(control==5){
+  if(control==6){
     control=0;
   }
 }
