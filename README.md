@@ -8,14 +8,14 @@
 
 |Name|Quentity|Value|
 |:---:|:----:|:----:|
-|[Capacitor](https://reurl.cc/OqekoD)|6|10uF|
+|Capacitor|6|10uF|
 |[TTMotor](https://reurl.cc/EzaZDv)|36|6mm , 1:25|
 |[Limit Switch](https://reurl.cc/v18gXe)|36|2A , 125V|
 |[Arduino Nano v3.1](https://reurl.cc/Xk9l90)|6|~|
 |[Raspberry Pi 4](https://reurl.cc/GrlbRG)|1|~|
 
 ### PCB
-![PCB](C:\Users\USER\Desktop\Repository\TKUECE-Dissertation\hardware\PCB\Image\PCB_Image.jpg)
+![PCB](\hardware\PCB\Image\PCB_Image.jpg)
 
 ### Device Appearance
 
@@ -29,7 +29,7 @@
 ### UI design:
 
 1. Pyqt5
-![](software\Pyqt5\Image\Pyqt.png)
+![Pyqt5](\software\Pyqt5\Image\Pyqt.png)
 
 ## Reference
 [ShapeShifting](http://shape.stanford.edu/research/shapeShift/)
