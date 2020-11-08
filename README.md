@@ -15,7 +15,8 @@
 |[Raspberry Pi 4](https://reurl.cc/GrlbRG)|1|~|
 
 ### PCB
-![PCB](\hardware\PCB\Image\PCB_Image.jpg)
+![PCB](https://i.imgur.com/lQVfD4I.jpg)
+
 
 ### Device Appearance
 
