@@ -53,7 +53,12 @@ void setup()
     pinMode(pin[i].lsp,INPUT_PULLUP);
     pin[i].reset=0;
   }
-  
+
+  int i=0;
+  while(1){
+    pinTest(i%6);
+    i++;
+  }
   
   motorReset();
   
