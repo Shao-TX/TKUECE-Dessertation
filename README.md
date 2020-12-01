@@ -4,6 +4,9 @@
 
 ## Hardware
 
+### Device Appearance
+![Device Appearance](https://i.imgur.com/DutelhU.jpg)
+
 ### Components
 
 |Name|Quentity|Value|
@@ -17,9 +20,6 @@
 ### PCB
 ![PCB](https://i.imgur.com/lQVfD4I.jpg)
 
-
-### Device Appearance
-
 ## Software
 
 ### Run the code :
@@ -30,7 +30,8 @@
 ### UI design:
 
 1. Pyqt5
-![Pyqt5](\software\Pyqt5\Image\Pyqt.png)
+![Pyqt5](https://i.imgur.com/KiMMtBH.png)
+
 
 ## Reference
 [ShapeShifting](http://shape.stanford.edu/research/shapeShift/)
